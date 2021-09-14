@@ -1,1 +1,76 @@
 # ml_project_pump_it_up
+
+## Preprocessing
+### Handling missing values
+* There about seven features with null values.
+
+* funder, installer, public meeting, scheme_management, scheme_name, permit are the columns with null values.
+
+* for the column funder, null values are replaced with mean values.
+
+* for the column installer, null values are replaced with unknown.
+
+* for the column public_meeting, True and false are the values for that column. As there abouth more True values compared to False values, null values are replaced with True
+
+* As these scheme_management reperesents who operates the water point and the 'management' represents how the water point is managed. As the scheme_management column has 4846 null values, drop the scheme_management column from the dataset.
+
+* scheme_name column is dropped due to it has large unique values and null values
+
+* Missing values of permit column is replaced with True as it has many True compared to False.
+
+* For the population, logitude columns, the zero values are replaced with the mean value of corresponding column.
+
+* For the construction_year, replaces the zero values with the round off mean value.
+
+### Categorical Encoding
+* There are about 30 object type features. After doing feature enginnering processes and dropping columns,
+for categorical encoding for these features used factorize method.
+
+* Did not used one hot encoding, as it increases number of columns the increase of the unique values in the column which cause larger computational power to train the model.
+
+### Standard Normalization
+* Finally standardize the features by bremoving the mean and scaling to unit variance.
+
+### Other
+* For the column installer, the names of the values are different due to spelling mistakes, use of upper case letters in different places in the word etc..
+
+* for a example 'District Water Department', 'District water depar','Distric Water Department'
+
+* 'COUN', 'District COUNCIL', 'DISTRICT COUNCIL','District Counci', 'District Council','Council','Counc','District  Council','Distri'
+
+* So replace those words with one unique value.
+
+
+## Feature Engineering
+
+### Create new features
+* For the column construction_year, as ther are about many unique values, create a new feature called decade to add the information about in which decade the construction has started.
+
+### feature Selection
+* For the columns,  quatity and quatity_group has contains same information, decided to drop the quatity_group because redundancy would reduce thebaccuracy of the model.
+
+* source, source_type, sorce_class three columns keep the same information, decided to keep only the sorce column as it has more details.
+
+* water_quality and quality_group columns has same information and water_quality has more unique values, decided to keep water_quality column only.
+
+* extraction_type_group or extraction_type columns has the same information. Although extraction_type has more unique values than extraction_type_group,  decided to keep extraction_type_group as the other one has some values with extremely low amount
+
+* waterpoint_type and waterpoint_type_group columns contain same information, decided to keep the waterpoint_type which has more details
+
+* column recorded_by has only one unique value for all the rows. So decided to remove that column.
+
+* wpt_name, scheme_name and region_code 3 columns have dropped due to having large unique values and null values.
+
+* for the subvillage column it has many non unique values. As this column has the location value of water point region but from the column region it already keep the location value of water point. handling difficulty of non unique object values, decided to drop the subvillage column.
+
+
+## Proof of Submission
+![proof_pump_it_up](https://user-images.githubusercontent.com/47697151/133275578-83cac20c-e25d-4102-83fa-50393141f4f3.PNG)
+
+## Final Rank
+![rank_pump_it_up](https://user-images.githubusercontent.com/47697151/133275871-ac5914b3-96ef-4491-8e25-6c7f3391fa8e.PNG)
+
+
+
+
+
