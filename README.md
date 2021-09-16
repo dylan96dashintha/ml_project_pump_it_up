@@ -65,10 +65,12 @@ for categorical encoding for these features used factorize method.
 
 
 ## Proof of Submission
-![proof_pump_it_up](https://user-images.githubusercontent.com/47697151/133275578-83cac20c-e25d-4102-83fa-50393141f4f3.PNG)
+![proof_pump_it_up_2](https://user-images.githubusercontent.com/47697151/133602630-b87bee8f-f702-4d0a-893c-56d5e7471d81.PNG)
+
 
 ## Final Rank
-![rank_pump_it_up](https://user-images.githubusercontent.com/47697151/133275871-ac5914b3-96ef-4491-8e25-6c7f3391fa8e.PNG)
+![rank_pump_it_up_2](https://user-images.githubusercontent.com/47697151/133602680-e116f044-b452-45ab-9cf6-d2c3c38217ad.PNG)
+
 
 
 
